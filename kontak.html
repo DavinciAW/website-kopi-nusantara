@@ -1,96 +1,128 @@
 <!DOCTYPE html>
 <html lang="id">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Kontak - Kopi Nusantara</title>
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-        <header>
-            <h1>Kopi Nusantara</h1>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <div class="container">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontak - Kopi Nusantara</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
         <a class="navbar-brand" href="#">
-            <img src="images/logo.png" alt="Logo UMKM" width="40" height="40" />
+          <img src="images/logo.png" alt="Logo UMKM" width="40" height="40" class="d-inline-block align-text-top"/> Kopi Nusantara
         </a>
-
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link active" href="index.html">Beranda</a></li>
-                <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
-                <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
-                <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
-                <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
-            </ul>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+            <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
+            <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+            <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+            <li class="nav-item"><a class="nav-link active" href="kontak.html">Kontak</a></li>
+          </ul>
         </div>
-    </div>
-</nav>
+      </div>
+    </nav>
 
-        </header>
+    <main class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="mb-0 text-center">Hubungi Kami</h3>
+                    </div>
+                    <div class="card-body p-4">
+                        <p class="text-center mb-4">Silakan isi formulir berikut untuk menghubungi tim Kopi Nusantara.</p>
 
-        <main>
-            <h2>Hubungi Kami</h2>
-            <p>Silahkan isi formulir berikut untuk menghubungi tim Kopi Nusantara: </p>
+                        <form id="formKontak" action="#" method="post">
+                            
+                            <div class="mb-3">
+                                <label for="nama" class="form-label">Nama Lengkap:</label>
+                                <input type="text" id="nama" name="nama" class="form-control" placeholder="Masukkan nama Anda" required />
+                                <span class="error text-danger small" id="errorNama"></span>
+                            </div>
 
-            <form id="formKontak" action="#" method="post">
-                <label for="nama">Nama:</label><br>
-                <input type="text" id="nama" name="nama" />
-                <span class="error" id="errorNama"></span><br><br>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email:</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="contoh@email.com" required />
+                                <span class="error text-danger small" id="errorEmail"></span>
+                            </div>
 
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" />
-                <span class="error" id="errorEmail"></span><br><br>
+                            <div class="mb-3">
+                                <label for="kota" class="form-label">Kota Asal:</label>
+                                <select id="kota" name="kota" class="form-select">
+                                    <option value="Jakarta">Jakarta</option>
+                                    <option value="Bandung">Bandung</option>
+                                    <option value="Surabaya">Surabaya</option>
+                                    <option value="Lainnya">Lainnya</option>
+                                </select>
+                            </div>
 
-                <label for="kategori">Kategori Pesan:</label><br>
-                <select id="kategori" name="kategori">
-                    <option value="">-- Pilih Kategori --</option>
-                    <option value="umum">Umum</option>
-                    <option value="produk">Produk</option>
-                    <option value="kerjasama">Kerja Sama</option>
-                </select>
-                <span class="error" id="errorKategori"></span><br><br>
+                            <div class="mb-3">
+                                <label for="kategori" class="form-label">Kategori Pesan:</label>
+                                <select id="kategori" name="kategori" class="form-select">
+                                    <option value="umum">Umum</option>
+                                    <option value="produk">Produk</option>
+                                    <option value="kerjasama">Kerja Sama</option>
+                                </select>
+                                <span class="error text-danger small" id="errorKategori"></span>
+                            </div>
 
-                <label for="pesan">Pesan:</label><br>
-                <textarea id="pesan" name="pesan" rows="5" cols="30"></textarea>
-                <span class="error" id="errorPesan"></span><br><br>
+                            <div class="mb-3">
+                                <label for="pesan" class="form-label">Pesan:</label>
+                                <textarea id="pesan" name="pesan" class="form-control" rows="5" required placeholder="Tulis pesan Anda di sini..."></textarea>
+                                <span class="error text-danger small" id="errorPesan"></span>
+                            </div>
 
-                <input type="checkbox" id="langganan" name="langganan" value="ya">
-                <label for="langganan">Saya ingin menerima newsletter</label><br><br>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" id="langganan" name="langganan" value="ya" class="form-check-input">
+                                <label class="form-check-label" for="langganan">Saya ingin menerima newsletter</label>
+                            </div>
 
-                <button type="submit">Kirim</button>
-                <p id="errorMsg" style="color:red;"></p>"
-            </form>
-        </main>
-        
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="tanggal" class="form-label">Tanggal:</label>
+                                    <input type="date" id="tanggal" name="tanggal" class="form-control">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label d-block">Jenis Kelamin:</label>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" id="pria" name="jeniskelamin" value="Pria">
+                                        <label class="form-check-label" for="pria">Pria</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" id="wanita" name="jeniskelamin" value="Wanita">
+                                        <label class="form-check-label" for="wanita">Wanita</label>
+                                    </div>
+                                </div>
+                            </div>
 
-        <footer>
-            <p>&copy; 2025 Kopi Nusantara.</p>
-        </footer>
+                            <div class="mb-4">
+                                <label for="myfile" class="form-label">Upload File (jika ada):</label>
+                                <input type="file" id="myfile" name="myfile" class="form-control">
+                            </div>
 
-        <script src="script.js"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script type="module" src="js/form.js"></script>
-        <script type="module" src="js/newsletter.js"></script>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg">Kirim Pesan</button>
+                            </div>
 
-        <script type="module">
-            const form = document.getElementById("formKontak");
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
-            form.addEventListener("submit", (event) => {
-                const valid = true;
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
+        <p>&copy; 2025 Kopi Nusantara. Hak cipta dilindungi.</p>
+    </footer>
 
-            if (!valid) {
-                event.preventDefault(); // Gagalkan submit
-            } else {
-            // beri komentar pada else disini karena sudah menggunakan form.js
-            // alert("Pesan berhasil dikirim!");
-            // form.reset();
-            }
-        });
-        </script>
-    </body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
 </html>

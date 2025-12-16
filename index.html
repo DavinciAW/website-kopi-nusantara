@@ -4,52 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profil UMKM - Kopi Nusantara</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
   <body>
-    <header>
-      <h1>Kopi Nusantara</h1>
-      <p>
-        UMKM yang menyajikan kopi lokal berkualitas tinggi dari seluruh
-        Nusantara.
-      </p>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
       <div class="container">
         <a class="navbar-brand" href="#">
-            <img src="images/logo.png" alt="Logo UMKM" width="40" height="40" />
+          <img src="images/logo.png" alt="Logo UMKM" width="40" height="40" class="d-inline-block align-text-top"/> Kopi Nusantara
         </a>
-
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link active" href="index.html">Beranda</a></li>
-                <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
-                <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
-                <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
-                <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
-            </ul>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Beranda</a></li>
+            <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
+            <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+            <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+            <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+          </ul>
         </div>
-    </div>
-</nav>
+      </div>
+    </nav>
 
-    </header>
-
-    <main>
-      <img src="images/banner.jpg" alt="Kopi Nusantara" width="300px" />
-      <section>
-        <h2>Selamat Datang di Website Kami</h2>
-        <p>Kami menyediakan kopi pilihan langsung dari petani ke cangkir Anda.</p>
+    <main class="container my-5 text-center">
+      <img src="images/banner.jpg" alt="Kopi Nusantara" class="img-fluid rounded mb-4 shadow" style="max-height: 400px; width: 20%; object-fit: cover;" />
+      
+      <section class="p-4 bg-light rounded border">
+        <h2 class="display-5">Selamat Datang di Website Kami</h2>
+        <p class="lead">Kami menyediakan kopi pilihan langsung dari petani ke cangkir Anda.</p>
+        <p>UMKM yang menyajikan kopi lokal berkualitas tinggi dari seluruh Nusantara.</p>
+        <a href="produk.html" class="btn btn-primary btn-lg mt-2">Lihat Produk</a>
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2025 Kopi Nusantara. Semua hak dilindungi.</p>
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
+      <div class="container">
+        <p class="mb-0">&copy; 2025 Kopi Nusantara. Semua hak dilindungi.</p>
+      </div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </body>
 </html>
